@@ -1,0 +1,315 @@
+SET COVERING PROBLEM — RESULTS
+============================================================
+Method: Variable Neighborhood Search (VNS)
+
+INSTANCE
+Input file: C:\Users\guill\Documents\FEUP\Projeto em gestao de operation\Part2\SCP_modular\instances\scp42.txt
+Number of elements: 200
+Number of available sets: 1000
+
+PARAMETERS
+Approximate time limit: 30 seconds
+Maximum shaking size: 5
+Random seed: 42
+
+RESULTS
+Initial cost (greedy with redundancy removal): 529
+Final cost (VNS): 512
+Cost reduction: 17
+Reduction relative to greedy: 3.21%
+Number of selected sets: 60
+Covered elements: 200/200
+Full coverage: YES
+Elapsed solving time: 30.000 seconds
+VNS iterations: 1701
+
+SELECTED SET IDs
+Numbering starts at 1, as in the input file.
+1 2 3 5 6 8 10 11 15 17 18 19 20 22 23 25 29 32 41 44 47 48 49 51 52 54 56 59 60 61 62 63 64 69 70 71 76 79 87 88 92 94 101 103 112 113 114 120 136 137 145 160 161 163 168 177 209 274 294 376
+
+SELECTED SETS AND THEIR COSTS
+Set 1: cost 1
+Set 2: cost 1
+Set 3: cost 1
+Set 5: cost 1
+Set 6: cost 1
+Set 8: cost 1
+Set 10: cost 2
+Set 11: cost 2
+Set 15: cost 2
+Set 17: cost 3
+Set 18: cost 3
+Set 19: cost 3
+Set 20: cost 3
+Set 22: cost 3
+Set 23: cost 3
+Set 25: cost 3
+Set 29: cost 4
+Set 32: cost 4
+Set 41: cost 4
+Set 44: cost 5
+Set 47: cost 5
+Set 48: cost 5
+Set 49: cost 5
+Set 51: cost 5
+Set 52: cost 5
+Set 54: cost 5
+Set 56: cost 5
+Set 59: cost 6
+Set 60: cost 6
+Set 61: cost 6
+Set 62: cost 6
+Set 63: cost 6
+Set 64: cost 6
+Set 69: cost 7
+Set 70: cost 7
+Set 71: cost 7
+Set 76: cost 8
+Set 79: cost 8
+Set 87: cost 9
+Set 88: cost 9
+Set 92: cost 10
+Set 94: cost 10
+Set 101: cost 11
+Set 103: cost 11
+Set 112: cost 12
+Set 113: cost 12
+Set 114: cost 12
+Set 120: cost 12
+Set 136: cost 14
+Set 137: cost 14
+Set 145: cost 15
+Set 160: cost 16
+Set 161: cost 16
+Set 163: cost 17
+Set 168: cost 17
+Set 177: cost 18
+Set 209: cost 22
+Set 274: cost 28
+Set 294: cost 31
+Set 376: cost 38
+
+BINARY SOLUTION
+Entry 1 corresponds to Set 1, entry 2 to Set 2, etc.
+1 = selected; 0 = not selected.
+1 1 1 0 1 1 0 1 0 1 1 0 0 0 1 0 1 1 1 1 0 1 1 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 1 1 0 1 1 0 1 0 1 0 0 1 1 1 1 1 1 0 0 0 0 1 1 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+COVERAGE COUNTS
+How many selected sets cover each element:
+Element 1: 2
+Element 2: 3
+Element 3: 1
+Element 4: 1
+Element 5: 3
+Element 6: 1
+Element 7: 2
+Element 8: 2
+Element 9: 1
+Element 10: 1
+Element 11: 3
+Element 12: 2
+Element 13: 1
+Element 14: 1
+Element 15: 1
+Element 16: 2
+Element 17: 1
+Element 18: 2
+Element 19: 1
+Element 20: 1
+Element 21: 1
+Element 22: 1
+Element 23: 2
+Element 24: 1
+Element 25: 1
+Element 26: 3
+Element 27: 1
+Element 28: 2
+Element 29: 1
+Element 30: 2
+Element 31: 2
+Element 32: 2
+Element 33: 1
+Element 34: 1
+Element 35: 2
+Element 36: 1
+Element 37: 1
+Element 38: 1
+Element 39: 3
+Element 40: 3
+Element 41: 1
+Element 42: 1
+Element 43: 1
+Element 44: 1
+Element 45: 4
+Element 46: 1
+Element 47: 2
+Element 48: 1
+Element 49: 2
+Element 50: 1
+Element 51: 2
+Element 52: 1
+Element 53: 1
+Element 54: 1
+Element 55: 1
+Element 56: 2
+Element 57: 4
+Element 58: 2
+Element 59: 2
+Element 60: 1
+Element 61: 2
+Element 62: 1
+Element 63: 1
+Element 64: 2
+Element 65: 2
+Element 66: 1
+Element 67: 1
+Element 68: 3
+Element 69: 1
+Element 70: 1
+Element 71: 1
+Element 72: 1
+Element 73: 1
+Element 74: 1
+Element 75: 1
+Element 76: 2
+Element 77: 1
+Element 78: 2
+Element 79: 1
+Element 80: 1
+Element 81: 1
+Element 82: 1
+Element 83: 1
+Element 84: 2
+Element 85: 1
+Element 86: 1
+Element 87: 1
+Element 88: 1
+Element 89: 1
+Element 90: 1
+Element 91: 1
+Element 92: 1
+Element 93: 1
+Element 94: 1
+Element 95: 2
+Element 96: 2
+Element 97: 1
+Element 98: 2
+Element 99: 1
+Element 100: 1
+Element 101: 1
+Element 102: 2
+Element 103: 3
+Element 104: 1
+Element 105: 1
+Element 106: 2
+Element 107: 1
+Element 108: 2
+Element 109: 1
+Element 110: 2
+Element 111: 2
+Element 112: 1
+Element 113: 1
+Element 114: 3
+Element 115: 1
+Element 116: 2
+Element 117: 2
+Element 118: 3
+Element 119: 1
+Element 120: 1
+Element 121: 1
+Element 122: 1
+Element 123: 2
+Element 124: 2
+Element 125: 1
+Element 126: 1
+Element 127: 2
+Element 128: 1
+Element 129: 1
+Element 130: 2
+Element 131: 1
+Element 132: 1
+Element 133: 1
+Element 134: 1
+Element 135: 1
+Element 136: 1
+Element 137: 2
+Element 138: 2
+Element 139: 1
+Element 140: 1
+Element 141: 1
+Element 142: 1
+Element 143: 2
+Element 144: 1
+Element 145: 1
+Element 146: 4
+Element 147: 3
+Element 148: 1
+Element 149: 1
+Element 150: 1
+Element 151: 1
+Element 152: 1
+Element 153: 1
+Element 154: 1
+Element 155: 1
+Element 156: 1
+Element 157: 4
+Element 158: 1
+Element 159: 1
+Element 160: 1
+Element 161: 3
+Element 162: 1
+Element 163: 1
+Element 164: 1
+Element 165: 1
+Element 166: 1
+Element 167: 1
+Element 168: 1
+Element 169: 1
+Element 170: 2
+Element 171: 1
+Element 172: 1
+Element 173: 1
+Element 174: 3
+Element 175: 1
+Element 176: 4
+Element 177: 1
+Element 178: 1
+Element 179: 1
+Element 180: 2
+Element 181: 1
+Element 182: 2
+Element 183: 1
+Element 184: 1
+Element 185: 1
+Element 186: 1
+Element 187: 1
+Element 188: 2
+Element 189: 1
+Element 190: 1
+Element 191: 5
+Element 192: 1
+Element 193: 2
+Element 194: 1
+Element 195: 2
+Element 196: 2
+Element 197: 1
+Element 198: 2
+Element 199: 1
+Element 200: 1
+
+IMPROVEMENT HISTORY
+Time in seconds | Best accepted cost
+0.031 | 529
+0.058 | 527
+0.324 | 525
+0.614 | 515
+2.207 | 513
+8.023 | 512
+
+INTERPRETATION
+Every element must have a coverage count of at least 1.
+Covering an element more than once is allowed.
+The objective is to minimize total selected-set cost.
+The result is heuristic; global optimality is not proven.
+The percentage reduction compares VNS with greedy,
+not with an optimal or best-known reference value.
