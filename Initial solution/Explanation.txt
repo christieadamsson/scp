@@ -1,0 +1,9 @@
+This folder was generated to showcase our first initial solution.
+Here we applied the greedy heuristics as well as redundancy removal. 
+
+The result we got from running instance 42 was:
+
+Instance: 4.2 (m=200, n=1000)
+After greedy: 79 subsets, Cost = 572, Feasible = True, Computation time = 0.0208 s
+After redundancy removal: 66 subsets, Cost = 529, Feasible = True, Time = 0.0208 s
+
