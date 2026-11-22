@@ -19,12 +19,12 @@ if __name__ == "__main__":
     print(
         f"After greedy: {len(greedy_sol)} subsets, "
         f"Cost = {total_cost(greedy_sol, inst)}, "
-        f"Feasible = {is_feasible(inst, greedy_sol)}, "
+        f"Feasible = {is_feasible(greedy_sol, inst)}, "
         f"Computation time = {after_greedy_time:.4f} s"
     )
     print(
         f"After redundancy removal: {len(final_sol)} subsets, "
         f"Cost = {total_cost(final_sol, inst)}, "
-        f"Feasible = {is_feasible(inst, final_sol)}, "
+        f"Feasible = {is_feasible(final_sol, inst)}, "
         f"Time = {total_time:.4f} s"
     )

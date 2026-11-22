@@ -1,8 +1,25 @@
 from __future__ import annotations
 from scp_reader import Instance
 
-def is_feasible(instance: Instance, solution: list[int]) -> bool:
-    """
+def is_feasible(solution, instance):
+    sol_list = list(solution)
+    sol_set = set(sol_list)
+
+    if len(sol_set) != len(sol_list):
+        return False
+
+    for j in sol_list:
+        if not (0 <= j < instance.n):
+            return False
+
+    for i in range(instance.m):
+        if not any(j in sol_set for j in instance.covered_by[i]):
+            return False
+
+    return True
+
+"""def is_feasible(instance: Instance, solution: list[int]) -> bool:
+    
     Verifies if a candidate solution (list of subset indices, 0-based) is feasible 
     for the given Set Covering Problem instance using instance.covered_by.
     
@@ -12,7 +29,7 @@ def is_feasible(instance: Instance, solution: list[int]) -> bool:
     
     Returns:
     - True if every element is covered at least once and indices are valid, else False.
-    """
+    
     # 1. Check for duplicates by comparing length with a set
     sol_set = set(solution)
     if len(sol_set) != len(solution):
@@ -30,4 +47,4 @@ def is_feasible(instance: Instance, solution: list[int]) -> bool:
             return False  # Infeasible: element i lacks coverage entirely
 
     # If all elements have at least one covering subset, the solution is valid
-    return True
+    return True""" 
