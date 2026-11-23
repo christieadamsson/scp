@@ -1,53 +1,16 @@
-# Set Covering Problem (SCP) — Constructive Heuristic & Local Search
+# Set Covering Problem (SCP)
 
-University project on the Set Covering Problem: find a set of subsets that covers every element at the lowest total cost. We build an initial solution with a greedy heuristic and then improve it with local search.
+University project on the Set Covering Problem, using a greedy constructive heuristic and local search.
 
-## Repository structure
+> Work in progress.
 
-```
-scp/
-├── Initial solution & Local Search/   # All source code
-├── instances/                         # OR-Library SCP test instances (Beasley)
-├── .gitignore
-└── README.md
-```
+## Structure
 
-### `Initial solution & Local Search/`
-
-| File | Purpose |
-| --- | --- |
-| `scp_reader.py` | Reads OR-Library instances into an `Instance` object (costs, `covers`, `covered_by`). Indices are 0-based internally. |
-| `feasibility.py` | Checks that every element is covered by at least one selected subset. |
-| `initial_sol.py` | Greedy heuristic: picks the subset with the lowest cost per newly covered element (tie-break: rarest elements, then lowest index), followed by redundant-subset removal. |
-| `moves.py` | Neighborhood moves: drop, add-then-drop, swap 1-1, swap 2-1, remove-and-repair. |
-| `local_search.py` | First-improvement local search for each move. |
-| `main_1st_sol.py` | Runs the initial solution (greedy + redundancy removal) on instance 4.2. |
-| `test_local_search.py` | Compares all local search methods on instance 4.2. |
-| `main_local_search.py` | Runs all instances and prints a summary table (mean cost, mean time and coefficient of variation per method). Swap 2-1 is excluded because of its high computation time. |
-| `Explanation.txt` | Notes and results of the initial solution. |
-
-### `instances/`
-
-SCP benchmark instances from Beasley's OR-Library (sets 4, 5, 6, A, B, C, D). Format: `m n`, then the `n` subset costs, then for each element the number of subsets covering it, followed by their IDs (1-based).
+- `Initial solution & Local Search/` — source code (instance reader, initial solution, local search)
+- `instances/` — OR-Library SCP test instances (Beasley)
 
 ## How to run
 
-Requires Python 3.9+ and no external packages. Run the commands from the repository root:
+From the repository root:
 
-```bash
-# Initial solution on scp42
-python "Initial solution & Local Search/main_1st_sol.py"
-
-# Local search comparison on scp42
-python "Initial solution & Local Search/test_local_search.py"
-
-# All instances + summary table
-python "Initial solution & Local Search/main_local_search.py"
-```
-
-## Example result (instance 4.2, m = 200, n = 1000)
-
-| Stage | Subsets | Cost |
-| --- | ---: | ---: |
-| Greedy | 79 | 572 |
-| After redundancy removal | 66 | 529 |
+    python "Initial solution & Local Search/main_local_search.py"
