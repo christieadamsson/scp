@@ -1,35 +1,13 @@
 """
-scp_reader.py - Reads Set Covering Problem instances in the OR-Library format
-(J.E. Beasley: scp41 ... scp410, scp51 ... scp510, scp61 ... scp65,
-scpa1 ... scpd5).
+scp_reader.py - Reads SCP instances in Beasley's OR-Library format.
 
-FILE FORMAT (all values are integers, separated by spaces/line breaks)
-    m  n                      -> number of elements (rows) and of subsets (columns)
-    c_1 c_2 ... c_n           -> cost of each subset
-    for each element i = 1..m:
-        k_i                   -> number of subsets that cover element i
-        j_1 j_2 ... j_k       -> the subsets that cover element i (1-based)
+Format: m n, then n subset costs, then for each element: the number of
+subsets covering it followed by their IDs (1-based). Lists wrap over
+lines, so the file is read as one stream of integers.
 
-The lists wrap over several lines (12 numbers per line), so line breaks
-carry no meaning. The reader therefore reads the whole file as a single
-stream of integers and consumes it in order.
-
-INTERNAL CONVENTIONS (used by the whole group)
-    * Everything is 0-based: subset j in the file  -> index j-1 here,
-                             element i in the file -> index i-1 here.
-      (index 0 = subset 1, index 1 = subset 2, ... as in the dispatch rule)
-    * When reporting a solution, convert back to 1-based: index 0 -> S1.
-
-STORED DATA (instead of the full m x n matrix a_ij, which is ~95-98% zeros)
-    cost[j]        cost of subset j                               (c_j)
-    covered_by[i]  list of subsets that cover element i           (a_ij = 1 for these j)
-    covers[j]      list of elements that subset j covers          (a_ij = 1 for these i)
-    a_ij = 1  <=>  j in covered_by[i]  <=>  i in covers[j]
-
-    covered_by is what the file gives directly (useful for the feasibility
-    test: every element needs at least one selected subset in covered_by[i]).
-    covers is built by inverting it (needed by the dispatch rule: count the
-    uncovered elements inside subset j).
+All indices are 0-based internally (subset j in the file -> j-1).
+covered_by[i] = subsets that cover element i
+covers[j]     = elements covered by subset j
 """
 
 from __future__ import annotations
@@ -38,7 +16,7 @@ import os
 import re
 import sys
 import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
@@ -48,7 +26,7 @@ class Instance:
     n: int                          # number of subsets (columns)
     cost: list[int]                 # cost[j], j = 0..n-1
     covered_by: list[list[int]]     # covered_by[i] = subsets covering element i, i = 0..m-1
-    covers: list[list[int]] = field(default_factory=list)  # covers[j] = elements in subset j
+    covers: list[list[int]]         # covers[j] = elements in subset j
 
     @property
     def nonzeros(self) -> int:
